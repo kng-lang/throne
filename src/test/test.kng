@@ -1,0 +1,7 @@
+test : pub scope {
+
+    test : pub fn (name : String) {
+        
+    }
+
+}

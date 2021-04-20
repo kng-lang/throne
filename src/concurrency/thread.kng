@@ -1,0 +1,10 @@
+thread : pub scope {
+
+
+    ThreadCallback : priv type = fn ();
+
+    Thread : pub type {
+
+    };
+
+}

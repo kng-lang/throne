@@ -1,0 +1,36 @@
+maths : pub scope {
+
+
+    /*
+
+    v : Vec;
+    v : Vec<3>;
+    v : Vec<f64>;
+    v : Vec<3,f64>;
+
+    */
+
+
+    Vec : pub type {
+
+        // specify that the index must be specified as the first
+        // resolution param e.g. Vec<3,...>
+        
+        _dimensions : U32 = @resolve(index=0, requires=resolve_number);
+        
+        _type : Type = @resolve(index=1, requires=resolve_type);
+
+        _data : [@resolve(index=0, requires=resolve_number)]@resolve(index=1, requires=resolve_type);
+
+
+    }
+
+
+    dot::Vec : pub fn (this) F64 {
+        0;
+    }
+
+
+
+
+}

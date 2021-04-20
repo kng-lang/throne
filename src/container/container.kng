@@ -1,0 +1,24 @@
+container : pub scope {
+
+    VectorInitCapacity : 25;
+
+    Vector : type {
+        _data : priv @resolve() ^DataType;
+        _size : priv U32 = 0;
+        _capacity : priv U32 = VectorInitCapacity;
+    };
+
+    new::Vector : pub fn () Vector {
+        {};
+    }
+
+    size::Vector : pub fn (this) U32 {
+        return self._size;
+    }
+
+    at::Vector : pub fn (this, index : U32) DataType {
+        this._data[index];
+    }
+
+
+}

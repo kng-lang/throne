@@ -1,0 +1,24 @@
+container : pub scope {
+
+    SliceInitCapacity : 25;
+
+    Slice : type {
+        _data : priv @resolve() ^DataType;
+        _size : priv U32 = 0;
+        _capacity : priv U32 = SliceInitCapacity;
+    };
+
+    new::Slice : pub fn () Vector {
+        {};
+    }
+
+    size::Slice : pub fn (this) U32 {
+        return self._size;
+    }
+
+    at::Slice : pub fn (this, index : U32) DataType {
+        this._data[index];
+    }
+
+
+}

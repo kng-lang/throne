@@ -1,0 +1,22 @@
+macros : pub scope {
+
+    resolvers : pub scope {
+
+
+        resolve_number : priv fn (e : Expression) Expression, U1 {
+            if !e.is_num {
+                return 0, false;
+            }
+            return e.to_num, true;
+        }
+
+        resolve_type : priv fn (e : Expression) Expression, U1 {
+            if !e.is_type {
+                return Expression::U0_pointer_type(), false;
+            }
+            return e.to_type, true;
+        }
+
+    }
+
+}

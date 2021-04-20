@@ -1,0 +1,10 @@
+lang : pub scope {
+
+
+    Type : pub type {
+        name : String;
+        is_num : U1;
+        is_pointer : U1;
+    }
+
+}
